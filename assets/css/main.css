@@ -1552,7 +1552,9 @@ section,
   transition: 0.3s;
   border: 1px solid var(--accent-color);
 }
-
+.mapbox{
+  width: 650px;
+}
 .pricing .buy-btn:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -1566,8 +1568,16 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
 }
-
+@media (max-width: 1450px) {
+  .mapbox{
+    width: 450px;
+  }
+ 
+}
 @media (max-width: 992px) {
+  .mapbox{
+    width: 450px;
+  }
   .pricing .box {
     max-width: 60%;
     margin: 0 auto 30px auto;
@@ -1575,6 +1585,9 @@ section,
 }
 
 @media (max-width: 767px) {
+  .mapbox{
+    width: 450px;
+  }
   .pricing .box {
     max-width: 80%;
     margin: 0 auto 30px auto;
@@ -1582,6 +1595,9 @@ section,
 }
 
 @media (max-width: 420px) {
+  .mapbox{
+    width: 350px;
+  }
   .pricing .box {
     max-width: 100%;
     margin: 0 auto 30px auto;
