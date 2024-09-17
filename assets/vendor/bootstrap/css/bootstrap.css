@@ -710,7 +710,10 @@ progress {
   max-width: 100%;
   height: auto;
 }
-
+.img-fluid-2 {
+  max-width: 100%;
+  height: auto !important;
+}
 .img-thumbnail {
   padding: 0.25rem;
   background-color: var(--bs-body-bg);
