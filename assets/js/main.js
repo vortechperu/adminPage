@@ -92,23 +92,52 @@
   /**
    * Animation on scroll function and init
    */
+
+
   function aosInit() {
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
+
     });
   }
   window.addEventListener('load', aosInit);
 
+
+  // Agrega un evento al botón para mostrar el popup
+ 
+  
+
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
 
+ 
+const glightbox = GLightbox({
+  selector: '.glightbox',
+  touchNavigation: true,
+  autoplayVideos: false,
+  
+
+  onOpen: () => {
+    setTimeout(() => {
+      const video = document.querySelector('video'); // Asegúrate de que esto sea correcto
+            if (video) {
+                video.volume = 0; // Silencia el video
+                video.play().catch(error => {
+                    console.log('Error al intentar reproducir el video:', error);
+                });
+               
+            }
+    }, 1000);
+    
+    
+ 
+  }
+});
+ 
   /**
    * Init swiper sliders
    */
